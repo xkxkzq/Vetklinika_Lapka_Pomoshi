@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапка помощи - Ветеринарная клиника в Ярославле</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="main.html" class="logo">
+                    <img class="logo__icon" src="image/logo.png" alt="Лапка помощи">
+                    <span class="logo__text">Лапка помощи</span>
+                </a>
+
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav" id="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="about.php" class="nav__link">О нас</a></li>
+                        <li class="nav__item"><a href="services.php" class="nav__link">Услуги</a></li>
+                        <li class="nav__item"><a href="specialists.php" class="nav__link">Специалисты</a></li>
+                        <li class="nav__item"><a href="profile.php" class="nav__link">Профиль</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Баннер -->
+        <section class="hero-image-section">
+            <div class="container-fluid">
+                <div class="hero-image">
+                    <div class="hero-image__img">
+                        <img src="image/banner.jpg" alt="Ветеринарная клиника Лапка помощи">
+                    </div>
+                    <div class="hero-image__content">
+                        <h1 class="hero-image__title">Ветеринарная клиника «Лапка помощи» в Ярославле – лечение и уход
+                            за вашими питомцами</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. О клинике с картой -->
+        <section class="about-clinic">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>О нашей клинике</h2>
+                        <p class="lead">"Лапка помощи" - это место, где встречаются профессионализм и искренняя любовь к
+                            животным.</p>
+                        <p>Мы работаем с 2015 года и за это время помогли более 15 000 питомцев вернуться к здоровой
+                            жизни.
+                            Наши специалисты регулярно проходят обучение и следят за последними тенденциями в
+                            ветеринарной медицине.</p>
+                        <p>Мы находимся по адресу: г. Ярославль, ул. Жукова, д. 33. Добраться до нас можно на любом виде
+                            транспорта, рядом есть удобная парковка.</p>
+                        <div class="schedule-title">График работы:</div>
+                        <p>Пн-Пт: 09:00 - 21:00<br>
+                            Сб-Вс: 10:00 - 18:00</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="map-wrapper">
+                            <div id="clinic-map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Услуги -->
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-item__icon">
+                            <i class="fas fa-stethoscope" style="font-size: 50px; color: var(--accent-color);"></i>
+                        </div>
+                        <h3 class="service-item__title">Терапия</h3>
+                        <p class="service-item__desc">Лечение заболеваний любой сложности</p>
+                        <span class="service-item__price">от 1000 ₽</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-item__icon">
+                            <i class="fas fa-cut" style="font-size: 50px; color: var(--accent-color);"></i>
+                        </div>
+                        <h3 class="service-item__title">Хирургия</h3>
+                        <p class="service-item__desc">Плановые и экстренные операции</p>
+                        <span class="service-item__price">от 2000 ₽</span>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-item__icon">
+                            <i class="fas fa-syringe" style="font-size: 50px; color: var(--accent-color);"></i>
+                        </div>
+                        <h3 class="service-item__title">Вакцинация</h3>
+                        <p class="service-item__desc">Комплексная защита от болезней</p>
+                        <span class="service-item__price">от 500 ₽</span>
+                    </div>
+                </div>
+                <div class="servises-button-container">
+                    <a href="zayavka.php" class="servises-button">Оставить заявку</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Акции и новости -->
+        <section class="promo-section">
+            <div class="container">
+                <h2 class="section-title">Акции и новости</h2>
+                <div class="promo-grid">
+                    <div class="promo-card">
+                        <div class="promo-card__content">
+                            <h3 class="promo-card__title">Первый прием со скидкой 20%</h3>
+                            <div class="promo-card__date">До 31 мая 2026</div>
+                            <p class="promo-card__desc">Для новых пациентов действует специальная цена на первичный
+                                осмотр и консультацию. Успейте записаться по выгодной цене!</p>
+                        </div>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-card__content">
+                            <h3 class="promo-card__title">Комплексная вакцинация</h3>
+                            <div class="promo-card__date">Постоянная акция</div>
+                            <p class="promo-card__desc">Вакцинация + чипирование со скидкой 15%. Защитите своего питомца
+                                от болезней и не потеряйте его.</p>
+                        </div>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-card__content">
+                            <h3 class="promo-card__title">Новое оборудование в клинике</h3>
+                            <div class="promo-card__date">15 марта 2026</div>
+                            <p class="promo-card__desc">Мы приобрели новый цифровой рентген-аппарат для более точной
+                                диагностики. Теперь обследование стало еще качественнее!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Преимущества -->
+        <section class="advantages-section">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="advantages">
+                    <div class="advantage">
+                        <div class="advantage__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="advantage__title">Работаем без выходных</h3>
+                        <p class="advantage__description">Ежедневно с 9:00 до 21:00, готовы прийти на помощь в любое
+                            время</p>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3 class="advantage__title">Современное оборудование</h3>
+                        <p class="advantage__description">Цифровой рентген, УЗИ экспертного класса, своя лаборатория</p>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="advantage__title">Самые опытные врачи</h3>
+                        <p class="advantage__description">Специалисты с многолетним стажем и регулярным повышением
+                            квалификации</p>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="advantage__title">Возможность выезда на дом</h3>
+                        <p class="advantage__description">Вызов ветеринара на дом для тех, кто не может посетить клинику
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Ответы на вопросы (FAQ) -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Нужно ли записываться на прием заранее?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Да, запись на прием обязательна. Это позволяет нам избежать очередей и уделить достаточно
+                            времени каждому пациенту. Вы можете записаться по телефону или через форму на сайте.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Принимаете ли вы экстренных пациентов?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Да, мы принимаем экстренных пациентов в любое время работы клиники. В критических ситуациях
+                            звоните нам, и мы подготовим все необходимое к вашему приезду.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Какие документы нужны для первого визита?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Для первого визита достаточно иметь при себе ветеринарный паспорт питомца (если есть). Если
+                            паспорта нет, мы можем оформить его в клинике.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Можно ли вызвать врача на дом?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Да, мы предоставляем услугу вызова ветеринара на дом. Это удобно, если питомец плохо
+                            переносит дорогу или у вас нет возможности привезти его в клинику.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Отзывы -->
+        <section class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <p class="review-card__text">Огромное спасибо доктору! Спасли нашего кота, когда другие клиники
+                            отказывали. Очень внимательные и заботливые.</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">АН</div>
+                            <div class="review-card__info">
+                                <h3>Анна Н.</h3>
+                                <p>хозяйка кота Барсика</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-card__text">Лучшая клиника в городе! Современное оборудование, чистые кабинеты.
+                            Собаке сделали сложную операцию, все прошло отлично.</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">ДМ</div>
+                            <div class="review-card__info">
+                                <h3>Дмитрий М.</h3>
+                                <p>хозяин лабрадора</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-card__text">В этой клинике хорошие специалисты. Осмотрели попугайчика,
+                            назначили лечение. Теперь Кеша полон сил и здоров. Спасибо!</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">ЕК</div>
+                            <div class="review-card__info">
+                                <h3>Екатерина К.</h3>
+                                <p>владелец попугая Кеши</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p class="footer__contact">Телефон: 8 (123) 456 78 90</p>
+                    <p class="footer__contact">E-mail: lapka_pomoshi@mail.ru</p>
+                    <p class="footer__contact">Адрес: г.Ярославль, ул.Жукова, д.33</p>
+
+                    <div class="schedule">
+                        <h3 class="footer__title">График работы</h3>
+                        <div class="schedule__item">
+                            <span class="schedule__day">Пн-Пт:</span>
+                            <span class="schedule__time">09:00 - 21:00</span>
+                        </div>
+                        <div class="schedule__item">
+                            <span class="schedule__day">Сб-Вс:</span>
+                            <span class="schedule__time">10:00 - 18:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__title">Клиентам</h3>
+                        <ul class="footer__list">
+                            <li><a href="zayavka.php" class="footer__link">Оставить заявку</a></li>
+                            <li><a href="services.php" class="footer__link">Цены</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__title">О нас</h3>
+                        <ul class="footer__list">
+                            <li><a href="about.php" class="footer__link">Компания</a></li>
+                            <li><a href="about.php" class="footer__link">Вакансии</a></li>
+                            <li><a href="about.php" class="footer__link">Лицензии</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__title">Навигация</h3>
+                        <ul class="footer__list">
+                            <li><a href="main.html" class="footer__link">Главная</a></li>
+                            <li><a href="about.php" class="footer__link">О нас</a></li>
+                            <li><a href="services.php" class="footer__link">Услуги</a></li>
+                            <li><a href="specialists.php" class="footer__link">Специалисты</a></li>
+                            <li><a href="profile.php" class="footer__link">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Ветеринарная клиника "Лапка помощи"</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Аккордеон для FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+
+        // Яндекс.Карта с адресом ул. Жукова, 33
+        ymaps.ready(init);
+
+        function init() {
+            var clinicCoordinates = [57.634510, 39.828524];
+
+            var myMap = new ymaps.Map("clinic-map", {
+                center: clinicCoordinates,
+                zoom: 17,
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+
+            var myPlacemark = new ymaps.Placemark(clinicCoordinates, {
+                hintContent: 'Ветеринарная клиника "Лапка помощи"',
+                balloonContent: '<strong>Лапка помощи</strong><br/>г. Ярославль, ул. Жукова, д.33<br/>☎ 8 (123) 456 78 90<br/><a href="https://maps.yandex.ru/?text=Ярославль, ул. Жукова, 33" target="_blank">Построить маршрут</a>'
+            }, {
+                preset: 'islands#greenDotIcon',
+                iconColor: '#009779'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+
+</html>
