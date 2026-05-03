@@ -303,33 +303,6 @@
     height: 100%;
 }
 
-/* CTA блок */
-.cta-block {
-    text-align: center;
-    margin-top: 60px;
-}
-
-.btn-cta {
-    display: inline-block;
-    background: linear-gradient(120deg, #00ffcc 0%, #00e6b8 100%);
-    color: #009779;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 16px 50px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: none;
-    cursor: pointer;
-}
-
-.btn-cta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 151, 121, 0.4);
-    background: linear-gradient(120deg, #00e6b8 0%, #00ccaa 100%);
-}
-
 /* Адаптивность */
 @media (max-width: 992px) {
     .values-grid {
@@ -397,9 +370,5 @@
     }
     .team-card__photo {
         padding-top: 120%;
-    }
-    .btn-cta {
-        padding: 12px 35px;
-        font-size: 1rem;
     }
 }
